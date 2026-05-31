@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensiklopedi Sahabat Rasulullah</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center text-white shadow-lg">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <span class="font-serif font-bold text-xl md:text-2xl text-emerald-900">Ensiklopedi<br><span class="text-sm md:text-base font-sans font-medium text-emerald-600">Sahabat Rasulullah</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#jilid-1" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-300">Jilid 1</a>
+                    <a href="#jilid-2" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-300">Jilid 2</a>
+                    <a href="#jilid-3" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-300">Jilid 3</a>
+                    <a href="#jilid-1" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg">Mulai Membaca</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-emerald-600 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg pb-4">
+            <div class="px-4 pt-2 pb-3 space-y-1 flex flex-col">
+                <a href="#jilid-1" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50">Jilid 1</a>
+                <a href="#jilid-2" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50">Jilid 2</a>
+                <a href="#jilid-3" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50">Jilid 3</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-emerald-900 text-white">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                <defs>
+                    <pattern id="islamic-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M0 20l20-20 20 20-20 20z" fill="none" stroke="currentColor" stroke-width="1"/>
+                    </pattern>
+                </defs>
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#islamic-pattern)"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-800/50 border border-emerald-500 text-emerald-200 text-sm font-semibold tracking-wider mb-6 backdrop-blur-sm">
+                KOLEKSI LENGKAP 104 BIOGRAFI
+            </span>
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6">
+                Jejak Emas Para<br>
+                <span class="text-emerald-300 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">Sahabat Rasulullah</span>
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+                Temukan kisah inspiratif, keteladanan, dan kepahlawanan dari 104 Sahabat Nabi Muhammad ﷺ. Ensiklopedi ini merangkum perjalanan hidup, perjuangan, serta pengorbanan mereka dalam menegakkan risalah cahaya Islam.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#jilid-1" class="w-full sm:w-auto px-8 py-4 bg-amber-500 hover:bg-amber-400 text-emerald-900 font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-amber-500/30 flex items-center justify-center gap-2">
+                    Mulai Eksplorasi <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Custom Shape Divider -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+            <svg class="relative block w-full h-[50px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.9,122.9,199.39,114.72,243.68,109.28,283.5,88.4,321.39,56.44Z" fill="#f9fafb"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-32 w-full">
+
+        <!-- JILID 1 SECTION -->
+        <section id="jilid-1" class="scroll-mt-32">
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                <div class="bg-gradient-to-r from-emerald-600 to-emerald-800 px-8 py-10 md:py-16 text-center text-white relative">
+                    <i class="fa-solid fa-bookmark absolute top-0 right-10 text-6xl text-amber-400 opacity-80 drop-shadow-md"></i>
+                    <h2 class="font-serif text-3xl md:text-5xl font-bold mb-4">Ensiklopedi Sahabat Jilid 1</h2>
+                    <p class="max-w-3xl mx-auto text-emerald-100 text-lg">
+                        Membahas profil dan kisah agung dari 17 sahabat besar yang merupakan tonggak sejarah Islam, termasuk Khulafaur Rasyidin dan mereka yang dijamin masuk surga. Keteguhan iman mereka menjadi lentera abadi umat.
+                    </p>
+                </div>
+                
+                <div class="p-6 md:p-10 bg-gray-50/50">
+                    <div id="jilid-1-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                        <!-- Content rendered by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JILID 2 SECTION -->
+        <section id="jilid-2" class="scroll-mt-32">
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                <div class="bg-gradient-to-r from-blue-700 to-indigo-900 px-8 py-10 md:py-16 text-center text-white relative">
+                    <i class="fa-solid fa-bookmark absolute top-0 right-10 text-6xl text-amber-400 opacity-80 drop-shadow-md"></i>
+                    <h2 class="font-serif text-3xl md:text-5xl font-bold mb-4">Ensiklopedi Sahabat Jilid 2</h2>
+                    <p class="max-w-3xl mx-auto text-blue-100 text-lg">
+                        Melanjutkan rekam jejak para pahlawan sejati. Di jilid ini, kita menyelami dedikasi 37 sahabat mulia dari berbagai latar belakang suku dan kabilah yang dipersatukan oleh manisnya kalimat tauhid.
+                    </p>
+                </div>
+                
+                <div class="p-6 md:p-10 bg-gray-50/50">
+                    <div id="jilid-2-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                        <!-- Content rendered by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JILID 3 SECTION -->
+        <section id="jilid-3" class="scroll-mt-32">
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-700 to-orange-900 px-8 py-10 md:py-16 text-center text-white relative">
+                    <i class="fa-solid fa-bookmark absolute top-0 right-10 text-6xl text-emerald-400 opacity-80 drop-shadow-md"></i>
+                    <h2 class="font-serif text-3xl md:text-5xl font-bold mb-4">Ensiklopedi Sahabat Jilid 3</h2>
+                    <p class="max-w-3xl mx-auto text-amber-100 text-lg">
+                        Puncak dan penutup dari epik perjuangan generasi terbaik. Membahas 50 sahabat nabi dengan kisah-kisah mengharukan dan kepahlawanan epik dalam mempertahankan panji Islam hingga hembusan napas terakhir.
+                    </p>
+                </div>
+                
+                <div class="p-6 md:p-10 bg-gray-50/50">
+                    <div id="jilid-3-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                        <!-- Content rendered by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 md:py-16 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+                
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center text-white shadow-lg">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <span class="font-serif font-bold text-xl text-white">Ensiklopedi<br><span class="text-sm font-sans font-medium text-emerald-500">Sahabat Rasulullah</span></span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6 text-gray-400">
+                        Proyek literasi digital ini didedikasikan untuk menyebarkan sejarah agung peradaban Islam melalui kisah nyata para pendamping Rasulullah ﷺ. Semoga menjadi amal jariyah dan sumber inspirasi bagi seluruh umat.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/pejuangbelaislam" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pejuangbelaislam" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@pejuangbelaislam" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 hover:scale-110 shadow-lg">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@pejuangbelaislam5235" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-span-1">
+                    <h4 class="text-white font-bold text-lg mb-6 border-b border-gray-700 pb-2 inline-block">Akses Cepat</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#jilid-1" class="hover:text-emerald-400 hover:translate-x-2 transition-all duration-300 inline-block"><i class="fa-solid fa-caret-right mr-2 text-emerald-600"></i> Jilid 1 (Sahabat 1 - 17)</a></li>
+                        <li><a href="#jilid-2" class="hover:text-emerald-400 hover:translate-x-2 transition-all duration-300 inline-block"><i class="fa-solid fa-caret-right mr-2 text-emerald-600"></i> Jilid 2 (Sahabat 18 - 54)</a></li>
+                        <li><a href="#jilid-3" class="hover:text-emerald-400 hover:translate-x-2 transition-all duration-300 inline-block"><i class="fa-solid fa-caret-right mr-2 text-emerald-600"></i> Jilid 3 (Sahabat 55 - 104)</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 hover:translate-x-2 transition-all duration-300 inline-block"><i class="fa-solid fa-caret-right mr-2 text-emerald-600"></i> Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1">
+                    <h4 class="text-white font-bold text-lg mb-6 border-b border-gray-700 pb-2 inline-block">Ikuti Saluran WhatsApp Kami</h4>
+                    <p class="text-sm text-gray-400 mb-5 leading-relaxed">Dapatkan update kisah-kisah menarik, artikel keislaman, dan inspirasi harian langsung dari saluran Pejuang Bela Islam di WhatsApp Anda.</p>
+                    <a href="https://whatsapp.com/channel/0029Vam9QLsJkK724fUsHA3A" target="_blank" class="w-full inline-flex justify-center items-center bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3.5 px-4 rounded-xl transition-all duration-300 hover:shadow-lg shadow-emerald-600/30 hover:scale-[1.02]">
+                        <i class="fa-brands fa-whatsapp text-xl mr-2"></i> Bergabung di WhatsApp
+                    </a>
+                </div>
+
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center sm:text-left">
+                <p class="text-sm text-gray-500">
+                    &copy; <script>document.write(new Date().getFullYear())</script> Ensiklopedi Sahabat Rasulullah | Pejuang Bela Islam. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts & Dynamic Content Renderer -->
+    <script>
+        // Data Sahabat Jilid 1
+        const jilid1 = [
+            "Abu Bakar ash-Shiddiq", "Umar bin al-Khatthab", "Utsman bin Affan", "Ali bin Abu Thalib",
+            "Thalhah bin Ubaidullah", "Az-Zubair bin al-Awwam", "Abdurrahman bin Auf", "Sa’ad bin Abu Waqqash",
+            "Sa’id bin Zaid", "Abu Ubaidah bin al-Jarrah", "Shuhaib ar-Rumi", "Salim Maula Abu Hudzaifah",
+            "Mush’ab bin Umair", "Zaid bin Tsabit", "Anas bin Malik", "Khabbab bin al-Arat", "Sa’ad bin Mu’adz"
+        ];
+
+        // Data Sahabat Jilid 2
+        const jilid2 = [
+            "Umair bin Sa’ad", "Abdullah bin Mas’ud", "Tsabit bin Qais", "Abu Thalhah al-Anshari",
+            "Bilal bin Rabah", "Ikrimah bin Abu Jahal", "Hamzah bin Abdul Muthalib", "Umair bin Wahab",
+            "Hudzaifah bin al-Yaman", "Ammar bin Yasir", "Ukasyah bin Mihshan", "Ja’far bin Abu Thalib",
+            "Jabir bin Abdullah", "Amr bin Jamuh", "Sa’ad bin ar-Rabi", "Haritsah bin an-Nu’man",
+            "Mu’awiyah bin Abu Sufyan", "Amir bin al-Akwa", "Abdullah bin Amr bin Haram", "Abu Hurairah",
+            "Zald bin Haritsah", "Usamah bin Zaid", "Sa’ad bin Ubadah", "Abu Sufyan bin al-Harits",
+            "Abdullah bin Salam", "Utbah bin Ghazwan", "Salman al-Farisi", "Tsumamah bin Utsal",
+            "Abdullah bin Rawahah", "Abu Dujanah", "Ubadah bin ash-Shamit", "Sa’id bin Amir",
+            "Abu Ayyub al-Anshari", "Zaid bin Arqam", "Abu Salamah", "Abdullah bin Ummi Maktum", "Ashim bin Tsabit"
+        ];
+
+        // Data Sahabat Jilid 3
+        const jilid3 = [
+            "Abu Musa al-Ash’ari", "Uthman bin Mazh’un", "Abu Darda", "Al-Bara bin Malik",
+            "Usaid bin Khudair", "Imran bin Hushain", "An Nu’man bin Muqarrin", "Suhail bin Amr",
+            "Abu Dzar al-Ghifari", "Khalid bin Sa’id", "Abdullah bin Hudzafah", "Abbad bin Bisyr",
+            "Thuwailah bin Khuwailid", "Zaid bin al-Khathab", "Khalid bin al-Walid", "Suraqah bin Malik",
+            "Abdullah bin Umar", "Nu’bidik bin Mas’ud", "Al-Abbas bin Abdul Muthalib", "Abu Jandal",
+            "Abu Bushair", "Amir bin Fuhairah", "Amr bin al-Ash", "Hanzhalah", "Abdullah bin Amr bin al-Ash",
+            "Haram bin Milhan", "Mu’adz bin Jabal", "Hakim bin Hizam", "Abul Ash bin ar-Rabi",
+            "Ubay bin Ka’ab", "Abu Tsa’labah al-Khusyani", "Abdullah bin Jahsy", "Al-Miqdad bin Amr",
+            "Ka’ab bin Malik", "Wahsyi bin Harb", "Julaibib", "Abdullah bin Abbas", "Jarir bin Abdullah al-Bajali",
+            "Ath-Thufail bin Amr ad-Dausi", "Salamah bin al-Akwa", "Umair bin al-Humam", "Muhammad bin Maslamah",
+            "Abdullah bin Unais", "Hassan bin Tsabit", "Qatadah bin an-Nu’man", "Khuzaimah bin Tsabit",
+            "Mu’adz bin Amr", "Mu’awwidz bin Afra", "Abu Qatadah al-Anshari", "Abdullah Dzul Biadain"
+        ];
+
+        // Generic function to render items
+        function renderItems(dataArray, startIndex, containerId, colorTheme) {
+            const container = document.getElementById(containerId);
+            let htmlContent = '';
+
+            dataArray.forEach((name, index) => {
+                const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+                const num = startIndex + index;
+                
+                // Constructing template based on colorTheme (emerald, blue, or amber)
+                htmlContent += `
+                    <a href="/${slug}" class="group flex items-center bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-${colorTheme}-300 transition-all duration-300 hover:scale-105">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-${colorTheme}-50 text-${colorTheme}-700 font-bold flex items-center justify-center group-hover:bg-${colorTheme}-600 group-hover:text-white transition-colors duration-300 shadow-inner">
+                            ${num}
+                        </div>
+                        <div class="ml-4 flex-grow">
+                            <h3 class="font-semibold text-gray-800 group-hover:text-${colorTheme}-700 transition-colors duration-300 text-sm md:text-base">${name}</h3>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-gray-300 group-hover:text-${colorTheme}-500 transition-colors duration-300 text-sm"></i>
+                    </a>
+                `;
+            });
+
+            container.innerHTML = htmlContent;
+        }
+
+        // Execute rendering on DOM Load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderItems(jilid1, 1, 'jilid-1-container', 'emerald');
+            // Using direct hex codes for dynamic tailwind classes that might not compile via CDN without safelisting
+            // To ensure CDN renders properly, we use predefined colors in the script above
+            renderItems(jilid2, 18, 'jilid-2-container', 'blue');
+            renderItems(jilid3, 55, 'jilid-3-container', 'amber');
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
