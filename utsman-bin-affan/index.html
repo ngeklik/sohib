@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utsman ibn Affan - Ensiklopedi Sahabat Rasulullah</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        },
+                        gold: {
+                            500: '#D4AF37',
+                            600: '#b5952f'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex-shrink-0 flex items-center gap-3 cursor-pointer group">
+                    <div class="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center text-white shadow-lg group-hover:bg-emerald-500 transition-colors duration-300">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <span class="font-serif font-bold text-xl md:text-2xl text-emerald-900 group-hover:text-emerald-700 transition-colors duration-300">Ensiklopedi<br><span class="text-sm md:text-base font-sans font-medium text-emerald-600">Sahabat Rasulullah</span></span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-300"><i class="fa-solid fa-arrow-left mr-2"></i>Beranda</a>
+                    <a href="#fakta" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-300">Fakta Utama</a>
+                    <a href="#timeline" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-300">Timeline Kehidupan</a>
+                    <a href="#fakta" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg">Mulai Membaca</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-emerald-600 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg pb-4">
+            <div class="px-4 pt-2 pb-3 space-y-1 flex flex-col">
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"><i class="fa-solid fa-arrow-left mr-2"></i> Kembali ke Beranda</a>
+                <a href="#fakta" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50">Fakta Utama</a>
+                <a href="#timeline" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50">Timeline Kehidupan</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-emerald-100">
+        <!-- Background Decorative Blobs -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-emerald-200/50 blur-3xl opacity-50 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-emerald-300/30 blur-3xl opacity-50 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+            
+            <div class="flex-1 text-center md:text-left max-w-2xl">
+                <span class="inline-block py-1 px-4 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-700 text-sm font-semibold tracking-wider mb-6">
+                    KHALIFAH KETIGA UMAT ISLAM
+                </span>
+                <h1 class="font-serif text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-4 text-emerald-900">
+                    Utsman bin<br>
+                    <span class="text-emerald-600">Affan</span>
+                </h1>
+                <h2 class="text-lg md:text-xl font-medium text-gray-500 mb-6 tracking-wide uppercase">Pemilik Dua Cahaya</h2>
+                <p class="text-lg md:text-xl text-gray-600 font-light leading-relaxed mb-10">
+                    Utsman ibn Affan sahabat Nabi dari suku Quraisy keturunan Bani Umawi. Ia termasuk dalam kelompok enam, delapan, dan kelompok sepuluh. Kelompok enam meliputi para sahabat Nabi yang ditunjuk oleh Khalifah Umar ibn al-Khattab—ketika seorang zindiq menusuknya—untuk memilih khalifah penerusnya. Kelompok delapan meliputi kaum muslim yang paling awal memeluk Islam. Kelompok sepuluh adalah para sahabat yang mendapat jaminan surga dari Nabi ﷺ. Ia adalah Khalifah Rasulullah yang ketiga setelah Umar ibn al-Khattab r.a.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#fakta" class="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-500/30 flex items-center justify-center gap-2">
+                        Jelajahi Kisahnya <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image Placeholder 9:16 -->
+            <div class="flex-shrink-0 w-full max-w-[280px] sm:max-w-[320px] aspect-[9/16] bg-gradient-to-br from-emerald-100 to-white border-4 border-emerald-500 rounded-[2rem] shadow-2xl flex flex-col items-center justify-center text-emerald-800 relative overflow-hidden group transform hover:-translate-y-2 transition-all duration-500">
+
+                <img src="https://cdn.laju.dev/slugpost//assets/019e879d-b3cb-78b3-bf9b-48fb13013b6c.webp" alt="Utsman ibn Affan" class="w-full h-full object-cover absolute top-0 left-0 z-10">
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full space-y-24 py-20">
+
+        <!-- Fakta Utama Cards -->
+        <section id="fakta" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-emerald-900 mb-4">Fakta Utama Sang Khalifah</h2>
+                <div class="w-24 h-1 bg-emerald-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 border-b-4 border-b-emerald-500 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group text-center">
+                    <div class="w-20 h-20 mx-auto bg-emerald-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-gem text-3xl text-emerald-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-emerald-900 mb-4">Dzunnurain</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Dijuluki <em class="font-medium">"Pemilik Dua Cahaya"</em> karena ia adalah satu-satunya manusia yang menikahi dua putri seorang Nabi berturut-turut (Ruqayyah dan Ummu Kultsum).
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 border-b-4 border-b-emerald-500 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group text-center">
+                    <div class="w-20 h-20 mx-auto bg-emerald-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-hand-holding-dollar text-3xl text-emerald-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-emerald-900 mb-4">Kedermawanan Tanpa Batas</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Seorang saudagar kaya raya yang tak pernah ragu mengorbankan seluruh hartanya untuk Islam, seperti mewakafkan Sumur Ruma dan membiayai sepertiga Pasukan Usrah.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 border-b-4 border-b-emerald-500 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group text-center">
+                    <div class="w-20 h-20 mx-auto bg-emerald-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-book-quran text-3xl text-emerald-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-emerald-900 mb-4">Pembukuan Al-Qur'an</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Jasanya yang paling abadi adalah menyatukan umat Islam yang nyaris berpecah belah karena perbedaan qira'at, dengan menggandakan dan mendistribusikan <em class="font-medium">Mushaf Utsmani</em>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Lahir Hingga Wafat -->
+        <section id="timeline" class="bg-emerald-50 py-24 scroll-mt-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-emerald-900 mb-4">Jejak Kehidupan</h2>
+                    <p class="text-gray-600 text-lg">Garis waktu singkat perjalanan hidup Sang Dzunnurain dari lahir hingga syahidnya.</p>
+                </div>
+
+                <div class="relative border-l-4 border-emerald-200 ml-4 md:ml-8 space-y-12 pb-4">
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="relative pl-8 md:pl-12 group">
+                        <div class="absolute -left-[14px] top-1 w-6 h-6 rounded-full bg-emerald-500 border-4 border-white shadow-md group-hover:scale-125 transition-transform duration-300"></div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100 group-hover:shadow-md transition-shadow duration-300">
+                            <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-bold rounded-full mb-3">576 M</span>
+                            <h3 class="font-serif font-bold text-xl text-emerald-900 mb-2">Kelahiran di Thaif</h3>
+                            <p class="text-gray-600 leading-relaxed">Lahir dari keluarga saudagar kaya yang sangat terpandang di Makkah (Bani Umayyah). Sejak muda, ia dikenal karena kehalusan budi pekertinya, pemalu, serta tidak pernah menyentuh khamr dan berhala.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="relative pl-8 md:pl-12 group">
+                        <div class="absolute -left-[14px] top-1 w-6 h-6 rounded-full bg-emerald-500 border-4 border-white shadow-md group-hover:scale-125 transition-transform duration-300"></div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100 group-hover:shadow-md transition-shadow duration-300">
+                            <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-bold rounded-full mb-3">611 M</span>
+                            <h3 class="font-serif font-bold text-xl text-emerald-900 mb-2">Menerima Cahaya Islam</h3>
+                            <p class="text-gray-600 leading-relaxed">Menjadi salah satu dari kelompok delapan orang pertama yang masuk Islam. Ia menerima dakwah dari sahabat karibnya, Abu Bakar as-Shiddiq, tanpa ragu sedikitpun.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="relative pl-8 md:pl-12 group">
+                        <div class="absolute -left-[14px] top-1 w-6 h-6 rounded-full bg-emerald-500 border-4 border-white shadow-md group-hover:scale-125 transition-transform duration-300"></div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100 group-hover:shadow-md transition-shadow duration-300">
+                            <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-bold rounded-full mb-3">615 M & 622 M</span>
+                            <h3 class="font-serif font-bold text-xl text-emerald-900 mb-2">Dua Kali Hijrah</h3>
+                            <p class="text-gray-600 leading-relaxed">Turut serta dalam hijrah pertama ke Habasyah (Ethiopia) bersama istrinya, Ruqayyah putri Rasulullah. Beberapa tahun kemudian, ia kembali berhijrah menyusul Rasulullah ke Madinah.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="relative pl-8 md:pl-12 group">
+                        <div class="absolute -left-[14px] top-1 w-6 h-6 rounded-full bg-emerald-500 border-4 border-white shadow-md group-hover:scale-125 transition-transform duration-300"></div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100 group-hover:shadow-md transition-shadow duration-300">
+                            <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-bold rounded-full mb-3">644 M / 23 H</span>
+                            <h3 class="font-serif font-bold text-xl text-emerald-900 mb-2">Menjadi Khalifah Ketiga</h3>
+                            <p class="text-gray-600 leading-relaxed">Melalui musyawarah majelis syura (kelompok enam) yang dibentuk Umar sebelum syahidnya, Utsman terpilih dan dibaiat menjadi Khalifah, memimpin umat Islam selama 12 tahun.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 5 -->
+                    <div class="relative pl-8 md:pl-12 group">
+                        <div class="absolute -left-[14px] top-1 w-6 h-6 rounded-full bg-emerald-500 border-4 border-white shadow-md group-hover:scale-125 transition-transform duration-300"></div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100 group-hover:shadow-md transition-shadow duration-300">
+                            <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-bold rounded-full mb-3">656 M / 35 H</span>
+                            <h3 class="font-serif font-bold text-xl text-emerald-900 mb-2">Wafat Syahid Membaca Al-Qur'an</h3>
+                            <p class="text-gray-600 leading-relaxed">Terdampar dalam fitnah besar, kediamannya dikepung pemberontak selama berminggu-minggu. Ia menolak memerintahkan sahabat mengangkat pedang karena tak ingin menumpahkan darah. Ia wafat terbunuh saat sedang berpuasa dan mendaras Al-Qur'an.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Momen Paling Genting -->
+        <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-emerald-900 mb-10 text-center">Momen Paling Fenomenal</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-md border-l-4 border-emerald-500 p-8 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600">
+                            <i class="fa-solid fa-water text-xl"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-xl text-emerald-900">Wakaf Sumur Ruma</h4>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Saat hijrah ke Madinah, umat Islam kesulitan air bersih dan harus membeli dengan mahal dari sumur milik seorang Yahudi. Merespons sabda Nabi, Utsman membeli sumur tersebut dengan harga fantastis dan menjadikannya wakaf gratis bagi seluruh penduduk Madinah selamanya.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md border-l-4 border-emerald-500 p-8 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600">
+                            <i class="fa-solid fa-coins text-xl"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-xl text-emerald-900">Mendanai Jaisyul Usrah</h4>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Menjelang Perang Tabuk di tengah musim panas dan masa paceklik (Jaisyul Usrah/Pasukan Sulit), Utsman menyumbangkan 1.000 dinar emas, 300 ekor unta, dan puluhan kuda beserta perlengkapannya. Ia menuangkan koin emas langsung ke pangkuan Nabi ﷺ.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="bg-emerald-900 text-white py-20 px-4 sm:px-6 relative overflow-hidden rounded-3xl mx-4 sm:mx-8 lg:mx-auto max-w-6xl shadow-2xl">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-10">
+                <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                    <defs>
+                        <pattern id="islamic-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M0 20l20-20 20 20-20 20z" fill="none" stroke="currentColor" stroke-width="1"/>
+                        </pattern>
+                    </defs>
+                    <rect x="0" y="0" width="100%" height="100%" fill="url(#islamic-pattern)"/>
+                </svg>
+            </div>
+            
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <i class="fa-solid fa-quote-right text-5xl md:text-7xl text-emerald-500/50 mb-8 block"></i>
+                <p class="font-serif text-2xl md:text-3xl lg:text-4xl font-light italic leading-relaxed mb-8 text-emerald-50">
+                    "Tidakkah aku pantas merasa malu terhadap seseorang yang malaikat saja merasa malu kepadanya?"
+                </p>
+                <div class="inline-block bg-emerald-800/80 px-6 py-2 rounded-full border border-emerald-600">
+                    <span class="font-bold text-gold-500 tracking-widest uppercase">HR. Muslim</span>
+                </div>
+                <p class="mt-6 text-emerald-300/80 text-sm md:text-base font-light">
+                    (Sabda Rasulullah ﷺ tentang sifat pemalu dan mulianya kehormatan Utsman bin Affan)
+                </p>
+            </div>
+        </section>
+
+        <!-- CTA Next Section -->
+        <section class="text-center py-10 px-4 max-w-3xl mx-auto">
+            <div class="w-16 h-16 mx-auto bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-2xl mb-6 shadow-inner">
+                <i class="fa-solid fa-book-open-reader"></i>
+            </div>
+            <h2 class="font-serif text-3xl font-bold text-emerald-900 mb-4">Lanjutkan Perjalanan Sejarah</h2>
+            <p class="text-gray-600 text-lg mb-8">
+                Pelajari kisah penerus beliau, sang gerbang ilmu yang masyhur dengan keberaniannya di medan laga dan kecerdasannya sebagai Khulafaur Rasyidin yang keempat.
+            </p>
+            <a href="https://ngeklik.github.io/sohib/ali-bin-abu-thalib" class="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-500/30">
+                Selanjutnya: Sahabat Ali <i class="fa-solid fa-arrow-right ml-1"></i>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 md:py-16 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+                
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center text-white shadow-lg">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <span class="font-serif font-bold text-xl text-white">Ensiklopedi<br><span class="text-sm font-sans font-medium text-emerald-500">Sahabat Rasulullah</span></span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6 text-gray-400">
+                        Proyek literasi digital ini didedikasikan untuk menyebarkan sejarah agung peradaban Islam melalui kisah nyata para pendamping Rasulullah ﷺ. Semoga menjadi amal jariyah dan sumber inspirasi bagi seluruh umat.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/pejuangbelaislam" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pejuangbelaislam" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@pejuangbelaislam" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 hover:scale-110 shadow-lg">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@pejuangbelaislam5235" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-span-1">
+                    <h4 class="text-white font-bold text-lg mb-6 border-b border-gray-700 pb-2 inline-block">Akses Cepat</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-emerald-400 hover:translate-x-2 transition-all duration-300 inline-block"><i class="fa-solid fa-caret-right mr-2 text-emerald-600"></i> Jilid 1 (Sahabat 1 - 17)</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 hover:translate-x-2 transition-all duration-300 inline-block"><i class="fa-solid fa-caret-right mr-2 text-emerald-600"></i> Jilid 2 (Sahabat 18 - 54)</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 hover:translate-x-2 transition-all duration-300 inline-block"><i class="fa-solid fa-caret-right mr-2 text-emerald-600"></i> Jilid 3 (Sahabat 55 - 104)</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 hover:translate-x-2 transition-all duration-300 inline-block"><i class="fa-solid fa-caret-right mr-2 text-emerald-600"></i> Kontak Kami</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1">
+                    <h4 class="text-white font-bold text-lg mb-6 border-b border-gray-700 pb-2 inline-block">Ikuti Saluran WhatsApp Kami</h4>
+                    <p class="text-sm text-gray-400 mb-5 leading-relaxed">Dapatkan update kisah-kisah menarik, artikel keislaman, dan inspirasi harian langsung dari saluran Pejuang Bela Islam di WhatsApp Anda.</p>
+                    <a href="https://whatsapp.com/channel/0029Vam9QLsJkK724fUsHA3A" target="_blank" class="w-full inline-flex justify-center items-center bg-[#25D366] hover:bg-[#1ebe57] text-white font-bold py-3.5 px-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#25D366]/30 hover:scale-[1.02]">
+                        <i class="fa-brands fa-whatsapp text-2xl mr-2"></i> Bergabung di WhatsApp
+                    </a>
+                </div>
+
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center sm:text-left">
+                <p class="text-sm text-gray-500">
+                    &copy; <script>document.write(new Date().getFullYear())</script> Ensiklopedi Sahabat Rasulullah | Pejuang Bela Islam. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
